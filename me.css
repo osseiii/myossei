@@ -13,27 +13,39 @@ header {
 
 
 .animated-title {
-    position: relative;
-    animation: moveTitle 5s infinite linear;
+  animation: fadeMove 5s infinite linear;
 }
 
-@keyframes moveTitle {
-    0% {
-        left: 0;
-    }
-    50% {
-        left: 50px;
-    }
-    100% {
-        left: 0;
-    }
+
+@keyframes fadeMove {
+  0% {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  50% {
+      opacity: 1;
+      transform: translateX(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
 
 .contact {
-    background: #07374a;
-    position: relative;
-    height: 85vh;
-  }
+  background: #07374a;
+  position: relative;
+  min-height: 85vh;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact-content {
+  max-width: 80%;
+}
   
   .contact-content {
     position: absolute;
